@@ -47,6 +47,10 @@
 			add_filter( 'custom_menu_order', '__return_true' );
 			add_filter( 'menu_order', 'grd_custom_menu_order' );
 			
+			// Change text from admin footer
+			// Function location: /libraries/theme-functions.php
+			add_filter( 'admin_footer_text', 'grd_footer_text' );
+			
 			// Add Editor Style
 			add_editor_style();
 			

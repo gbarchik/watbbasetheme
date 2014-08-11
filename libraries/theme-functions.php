@@ -42,6 +42,11 @@ function grd_custom_menu_order( $menu_ord ) {
 	);
 }
 
+// Change text from admin footer
+function grd_footer_text() {
+	echo '© Desenvolvido por <a href="http://granada.ag">Granada</a>';
+}
+
 // Enqueue scripts && styles
 function grd_scripts() {
 	wp_enqueue_style( 'main-style', get_stylesheet_uri() );
