@@ -1,0 +1,60 @@
+// Media Queries
+@mixin breakpoint( $breakpoint ) {
+	@if $breakpoint == mouse {
+		@media only screen and (min-width: 35em) { @content; } // 560px
+	}
+	
+	@else if $breakpoint == dog {
+		@media only screen and (min-width: 48em) { @content; } // 768px
+	}
+	
+	@else if $breakpoint == horse {
+		@media only screen and (min-width: 64em) { @content; } // 1024px
+	}
+	
+	@else if $breakpoint == elephant {
+		@media only screen and (min-width: 75em) { @content; } // 1200px
+	}
+	
+	@else if $breakpoint == whale {
+		@media only screen and (min-width: 87.5em) { @content; } // 1400px
+	}
+	
+	@else if $breakpoint == chameleon {
+		@media print, ( -o-min-device-pixel-ratio: 5/4 ), ( -webkit-min-device-pixel-ratio: 1.25 ), ( min-resolution: 120dpi ) { @content; }
+	}
+	
+	@else {
+		@media only screen and (min-width: $breakpoint) { @content; }
+	}
+}
+
+
+// Clearfix
+@mixin clearfix {
+	*zoom: 1;
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+
+// Image Replacement
+@mixin ir {
+	*text-indent: -9999px;
+	border: 0;
+	background-color: transparent;
+	overflow: hidden;
+	
+	&:before {
+		content: "";
+		display: block;
+		width: 0;
+		height: 150%;
+	}
+}

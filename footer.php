@@ -1,0 +1,17 @@
+<?php
+/**
+ * Theme Footer
+ *
+ * @package watbbase
+ */
+?>
+		</div><?php // End .site-content ?>
+		
+		<footer class="site-footer" role="contentinfo">
+
+		</footer>
+
+		<?php wp_footer(); ?>
+
+	</body>
+</html>
