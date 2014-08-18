@@ -5,6 +5,9 @@
  * @package watbbase
  */
 
+// Constants
+	define('DEV', true);
+
 // Setup
 	// Init
 	require get_template_directory_uri() . '/libraries/init.php';
@@ -21,3 +24,4 @@
 		// grd_add_capabilities( 'post_type_name' );
 	}
 	add_action( 'admin_init', 'grd_add_post_type_caps' );
+	

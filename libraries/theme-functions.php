@@ -54,5 +54,8 @@ function grd_scripts() {
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'plugins', get_template_directory_uri() . '/assets/scripts/plugins.min.js', array('jquery'), NULL, true );
 		wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/scripts/main.min.js', array('jquery'), NULL, true );
+		if( DEV ) {
+			wp_enqueue_script( 'livereload', '//localhost:35729/livereload.js', NULL, NULL, true);
+		}
 	}
 }
