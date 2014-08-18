@@ -1,0 +1,19 @@
+{
+	"name": "watbbase",
+	"version": "1.0",
+	"authors": [
+		"Guilherme Barchik <guilherme@granada.ag>"
+	],
+	"homepage": "http://granada.ag",
+	"ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "normalize-scss": "~3.0.1",
+    "modernizr": "~2.8.3"
+  }
+}
