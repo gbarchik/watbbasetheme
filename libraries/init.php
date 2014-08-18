@@ -13,7 +13,7 @@
 			show_admin_bar( false );
 			
 			// Languages - Allow theme translation
-			load_theme_textdomain( 'watbbase', get_template_directory() . '/languages' );
+			load_theme_textdomain( 'watbbase', get_template_directory_uri() . '/languages' );
 			
 			// Clean up head
 			remove_action( 'wp_head', 'rsd_link' );
