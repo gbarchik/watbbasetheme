@@ -1,29 +1,29 @@
 // Media Queries
 @mixin breakpoint( $breakpoint ) {
 	@if $breakpoint == mouse {
-		@media only screen and (min-width: 35em) { @content; } // 560px
+		@media only screen and (min-width: em(480)) { @content; }
 	}
-	
+
 	@else if $breakpoint == dog {
-		@media only screen and (min-width: 48em) { @content; } // 768px
+		@media only screen and (min-width: em(768)) { @content; }
 	}
-	
+
 	@else if $breakpoint == horse {
-		@media only screen and (min-width: 64em) { @content; } // 1024px
+		@media only screen and (min-width: em(1024)) { @content; }
 	}
-	
+
 	@else if $breakpoint == elephant {
-		@media only screen and (min-width: 75em) { @content; } // 1200px
+		@media only screen and (min-width: em(1280)) { @content; }
 	}
-	
+
 	@else if $breakpoint == whale {
-		@media only screen and (min-width: 87.5em) { @content; } // 1400px
+		@media only screen and (min-width: em(1440)) { @content; }
 	}
-	
+
 	@else if $breakpoint == chameleon {
 		@media print, ( -o-min-device-pixel-ratio: 5/4 ), ( -webkit-min-device-pixel-ratio: 1.25 ), ( min-resolution: 120dpi ) { @content; }
 	}
-	
+
 	@else {
 		@media only screen and (min-width: $breakpoint) { @content; }
 	}
@@ -50,7 +50,7 @@
 	border: 0;
 	background-color: transparent;
 	overflow: hidden;
-	
+
 	&:before {
 		content: "";
 		display: block;
