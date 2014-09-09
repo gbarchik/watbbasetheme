@@ -45,12 +45,65 @@ function grd_widgets_init() {
 	));*/
 }
 
+// Register Post Types
+function grd_post_type_init() {
+	// Example Post Type
+	/*$args = array(
+		'labels'             => array(
+			'name'               => 'Names',
+			'singular_name'      => 'Name',
+			'add_new'            => 'Adicionar Novo',
+			'add_new_item'       => 'Adicionar Novo Name',
+			'new_item'           => 'Novo Name',
+			'edit_item'          => 'Editar Name',
+			'view_item'          => 'Ver Name',
+			'all_items'          => 'Todos os Names',
+			'search_items'       => 'Buscar Names',
+			'not_found'          => 'Nenhum Name Encontrado',
+			'not_found_in_trash' => 'Nenhum Name Encontrado na Lixeira'
+		),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'has_archive'        => true,
+		'supports'           => array( 'title', 'editor', 'thumbnail' )
+	);
+	register_post_type( 'name', $args );*/
+}
+
+// Register Taxonomies
+function grd_taxonomy_init() {
+	// Example Taxonomy
+	/*$args = array(
+		'hierarchical'      => true,
+		'labels'            => array(
+			'name'              => 'Names',
+			'singular_name'     => 'Name',
+			'search_items'      => 'Buscar Names',
+			'all_items'         => 'Todas as Names',
+			'parent_item'       => 'Name Pai',
+			'parent_item_colon' => 'Name Pai:',
+			'edit_item'         => 'Editar Name',
+			'update_item'       => 'Atualizar Name',
+			'add_new_item'      => 'Adicionar Name',
+			'new_item_name'     => 'Nome da Nova Name',
+			'menu_name'         => 'Names'
+		),
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true
+	);
+	register_taxonomy( 'name', array('post'), $args );*/
+}
+
 // Change menu order
 function grd_custom_menu_order( $menu_ord ) {
 	if( !$menu_ord ) {
 		return true;
 	}
-	
+
 	return array(
 		// 'index.php', // Dashboard
 		// 'separator1', // First separator
