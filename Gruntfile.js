@@ -26,6 +26,18 @@ module.exports = function(grunt) {
 			}
 		},
 
+		// Browser Sync
+		browserSync: {
+			bsFiles: {
+				src: 'style.css'
+			},
+			options: {
+				watchTask: true,
+				notify: false,
+				// proxy: "localhost.yourdomain.com"
+			}
+		},
+
 		// Sass
 		sass: {
 			dist: {
@@ -127,6 +139,7 @@ module.exports = function(grunt) {
 
 	});
 
-	grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin', 'uglify', 'imagemin', 'watch']);
+	grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin', 'uglify', 'imagemin', 'browserSync', 'watch']);
+	grunt.registerTask('serve', ['browserSync', 'watch']);
 
 };
