@@ -1,11 +1,11 @@
 'use strict';
 module.exports = function(grunt) {
-	
+
 	// Load all Grunt Tasks
 	require('load-grunt-tasks')(grunt);
-	
+
 	grunt.initConfig({
-		
+
 		// Watch
 		watch: {
 			sass: {
@@ -22,10 +22,10 @@ module.exports = function(grunt) {
 			},
 			livereload: {
 				options: { livereload: true },
-				files: ['**/*.{html,php}', 'style.css', 'assets/js/*.js', 'assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}']
+				files: ['**/*.{html,php}', 'style.css', 'assets/scripts/*.js', 'assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}']
 			}
 		},
-		
+
 		// Sass
 		sass: {
 			dist: {
@@ -39,7 +39,7 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		
+
 		// Autoprefixer
 		autoprefixer: {
 			options: {
@@ -66,7 +66,7 @@ module.exports = function(grunt) {
 				ext: '.css'
 			}
 		},
-		
+
 		// JS Linting
 		jshint: {
 			options: {
@@ -75,39 +75,39 @@ module.exports = function(grunt) {
 			},
 			all: [
 				'Gruntfile.js',
-				'assets/js/source/**/*.js'
+				'assets/scripts/source/**/*.js'
 			]
 		},
-		
+
 		// Uglify
 		uglify: {
 			plugins: {
 				options: {
-					sourceMap: 'assets/js/plugins.js.map',
+					sourceMap: 'assets/scripts/plugins.js.map',
 					sourceMappingURL: 'plugins.js.map',
 					sourceMapPrefix: 2
 				},
 				files: {
-					'assets/js/plugins.min.js': [
-						'assets/js/source/plugins.js',
-						//'assets/js/vendor/pluginname/pluginnanme.js'
+					'assets/scripts/plugins.min.js': [
+						'assets/scripts/source/plugins.js',
+						//'assets/scripts/vendor/pluginname/pluginnanme.js'
 					]
 				}
 			},
 			main: {
 				options: {
-					sourceMap: 'assets/js/main.js.map',
+					sourceMap: 'assets/scripts/main.js.map',
 					sourceMappingURL: 'main.js.map',
 					sourceMapPrefix: 2
 				},
 				files: {
-					'assets/js/main.min.js': [
-						'assets/js/source/main.js'
+					'assets/scripts/main.min.js': [
+						'assets/scripts/source/main.js'
 					]
 				}
 			}
 		},
-		
+
 		// Image Optimization
 		imagemin: {
 			dist: {
@@ -124,9 +124,9 @@ module.exports = function(grunt) {
 				}]
 			}
 		}
-		
+
 	});
-	
+
 	grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin', 'uglify', 'imagemin', 'watch']);
-	
+
 };
