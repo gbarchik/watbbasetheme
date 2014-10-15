@@ -42,6 +42,14 @@
 			// Function location: /libraries/theme-functions.php
 			add_action( 'widgets_init', 'grd_widgets_init' );
 			
+			// Register Post Types
+			// Function location: /libraries/theme-functions.php
+			add_action( 'init', 'grd_post_type_init' );
+			
+			// Register Taxonomies
+			// Function location: /libraries/theme-functions.php
+			add_action( 'init', 'grd_taxonomy_init' );
+			
 			// Change admin menu order
 			// Function location: /libraries/theme-functions.php
 			add_filter( 'custom_menu_order', '__return_true' );
