@@ -13,12 +13,14 @@ Tags:
 */
 
 // Reset, Vars, Mixins, etc
+@import "partials/normalize";
 @import "partials/mixins";
 @import "partials/variables";
-@import "partials/normalize";
+@import "partials/helpers";
 
 // General
 @import "partials/general";
+@import "partials/images";
 
 // Layout
 @import "partials/layout";
@@ -35,5 +37,4 @@ Tags:
 @import "partials/forms";
 
 // Helper, Print, Etc
-@import "partials/helpers";
 @import "partials/print";
